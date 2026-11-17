@@ -1,321 +1,1305 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter Junio Pontes Teixeira | Ciência de Dados & Tecnologia</title>
 
-<title>Walter Junio Pontes Teixeira | Data Scientist</title>
+    <meta name="description" content="Portfólio profissional de Walter Junio Pontes Teixeira. Ciência de Dados, Business Intelligence, Python, Banco de Dados, Desenvolvimento de Sistemas e Pesquisa Aplicada.">
 
-<meta name="description"
-content="Portfólio profissional de Walter Junio Pontes Teixeira - Ciência de Dados, Desenvolvimento Web, Banco de Dados e Tecnologia.">
+    <meta name="author" content="Walter Junio Pontes Teixeira">
+    <meta name="theme-color" content="#080d1a">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
+    <style>
+        :root {
+            --bg: #080d1a;
+            --bg-card: #101a2d;
+            --bg-light: #142139;
+            --primary: #00d9ff;
+            --secondary: #7b61ff;
+            --text: #e9f1ff;
+            --muted: #a3b2c9;
+            --border: rgba(0, 217, 255, .18);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 13, 26, .95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+            padding: 16px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--primary);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 85px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(23px, 3vw, 32px);
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin: -30px auto 40px;
+            max-width: 750px;
+        }
+
+        #hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label {
+            color: var(--primary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(32px, 5vw, 58px);
+            line-height: 1.3;
+        }
+
+        .hero-content h1 span {
+            display: block;
+            color: var(--primary);
+        }
+
+        #typing {
+            color: #a78bfa;
+            font-size: clamp(17px, 3vw, 23px);
+            margin: 22px 0;
+            min-height: 35px;
+        }
+
+        .hero-content p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 13px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #07111d;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 217, 255, .2);
+        }
+
+        .profile-links {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .profile-links a {
+            color: var(--muted);
+            font-size: 25px;
+            transition: .3s;
+        }
+
+        .profile-links a:hover {
+            color: var(--primary);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: justify;
+            color: var(--muted);
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 35px;
+            color: var(--primary);
+        }
+
+        .stat-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            padding: 18px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            transition: .3s;
+        }
+
+        .skill-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            display: block;
+            color: var(--primary);
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .subsection-title {
+            color: var(--primary);
+            font-size: 20px;
+            margin: 40px 0 20px;
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            border-left: 2px solid var(--primary);
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 10px 20px 30px;
+            margin-bottom: 15px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            top: 20px;
+            width: 14px;
+            height: 14px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            color: var(--primary);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .timeline-item .detail {
+            font-size: 12px;
+            margin-top: 7px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .card-icon {
+            font-size: 30px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: rgba(0, 217, 255, .09);
+            color: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 10px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card .project-footer {
+            margin-top: auto;
+            padding-top: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .language-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .language-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .language-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .contact-box {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            margin: 15px 0;
+        }
+
+        .contact-box a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 25px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        @media(max-width: 850px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                background: #0c1526;
+                padding: 25px;
+                flex-direction: column;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            section {
+                padding: 65px 18px;
+            }
+
+            #hero {
+                min-height: 570px;
+            }
+
+            .stats-grid,
+            .languages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-box {
+                padding: 25px 15px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+        }
+
+        @media(prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div id="particles-js"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-<script src="js/app.js"></script>
-
 <header>
+    <nav class="navbar">
 
-<nav class="navbar">
+        <div class="logo">WALTER<span>.</span></div>
 
-<div class="logo">
-WALTER<span>.</span>
-</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#skills">Competências</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
 
-<ul class="nav-links">
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            <i class="fas fa-bars"></i>
+        </button>
 
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#formacao">Formação</a></li>
-<li><a href="#experiencia">Experiência</a></li>
-<li><a href="#projetos">Projetos</a></li>
-<li><a href="#contato">Contato</a></li>
-
-</ul>
-
-<div class="menu-btn">
-<i class="fas fa-bars"></i>
-</div>
-
-</nav>
-
+    </nav>
 </header>
 
-<section id="hero">
+<main>
 
-<div class="hero-content">
+    <!-- APRESENTAÇÃO -->
 
-<h1>
-Walter Junio
-<span>Pontes Teixeira</span>
-</h1>
+    <section id="hero">
 
-<h2 id="typing"></h2>
+        <div class="hero-content">
 
-<p>
-
-Transformando dados em conhecimento,
-tecnologia em inovação e projetos em impacto social.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="https://github.com/KASSAMBA-MTB"
-target="_blank"
-class="btn-primary">
-
-GitHub
-
-</a>
-
-<a href="https://lattes.cnpq.br/4578034532577888"
-target="_blank"
-class="btn-secondary">
-
-Currículo Lattes
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="sobre">
-
-<div class="container">
-
-<h2>Sobre Mim</h2>
-
-<p>
-
-Sou bacharelando em Ciência de Dados,
-tecnólogo em Análise e Desenvolvimento de Sistemas
-e especialista em Banco de Dados.
-
-Atuo com foco em Ciência de Dados,
-Desenvolvimento Web,
-Transformação Digital
-e Soluções Tecnológicas orientadas a resultados.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="stats">
-
-<div class="container stats-grid">
-
-<div class="stat-card">
-<h3 class="counter" data-target="15">32</h3>
-<p>Anos de Experiência</p>
-</div>
-
-<div class="stat-card">
-<h3 class="counter" data-target="3">3</h3>
-<p>Projetos Integradores</p>
-</div>
-
-<div class="stat-card">
-<h3 class="counter" data-target="4">5</h3>
-<p>Formações</p>
-</div>
-
-<div class="stat-card">
-<h3 class="counter" data-target="10">4</h3>
-<p>Certificações</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<div class="container">
-
-<h2>Stack Tecnológica</h2>
-
-<div class="skills-grid">
-
-<div class="skill-card">Python</div>
-<div class="skill-card">SQL</div>
-<div class="skill-card">PostgreSQL</div>
-<div class="skill-card">MySQL</div>
-<div class="skill-card">Django</div>
-<div class="skill-card">Flask</div>
-<div class="skill-card">JavaScript</div>
-<div class="skill-card">HTML5</div>
-<div class="skill-card">CSS3</div>
-<div class="skill-card">Git</div>
-<div class="skill-card">GitHub</div>
-<div class="skill-card">Machine Learning</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="formacao">
-
-    <div class="container">
-
-        <h2>Formação Acadêmica</h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <h3>2023 - Atual</h3>
-                <p>Bacharelado em Ciência de Dados - UNIVESP</p>
+            <div class="hero-label">
+                Tecnologia • Dados • Inovação
             </div>
 
-            <div class="timeline-item">
-                <h3>2018 - 2021</h3>
-                <p>Pós-graduação em Banco de Dados - Unicesumar</p>
+            <h1>
+                Walter Junio
+                <span>Pontes Teixeira</span>
+            </h1>
+
+            <h2 id="typing">
+                Ciência de Dados
+            </h2>
+
+            <p>
+                Transformando dados em conhecimento, tecnologia em inovação
+                e soluções computacionais em impacto social.
+                Bacharelando em Ciência de Dados, especialista em Banco de Dados
+                e desenvolvedor de soluções tecnológicas.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="https://github.com/KASSAMBA-MTB"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-primary">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+
+                <a href="http://lattes.cnpq.br/4578034532577888"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-secondary">
+                    <i class="fas fa-graduation-cap"></i>
+                    Currículo Lattes
+                </a>
+
+                <a href="curriculo-walter-teixeira.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-secondary">
+                    <i class="fas fa-file-pdf"></i>
+                    Currículo PDF
+                </a>
+
             </div>
 
-            <div class="timeline-item">
-                <h3>2016 - 2018</h3>
-                <p>Tecnólogo em Análise e Desenvolvimento de Sistemas - Unicesumar</p>
-            </div>
+            <div class="profile-links">
 
-            <div class="timeline-item">
-                <h3>2012 - 2015</h3>
-                <p>Técnico em Informática - IFSULDEMINAS</p>
+                <a href="https://github.com/KASSAMBA-MTB"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="http://lattes.cnpq.br/4578034532577888"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Currículo Lattes">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+
+                <a href="https://kassamba-mtb.github.io/ProjetoWeb/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Portfólio">
+                    <i class="fas fa-globe"></i>
+                </a>
+
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- SOBRE -->
 
-<section id="experiencia">
+    <section id="sobre">
 
-<div class="container">
+        <div class="container">
 
-<h2>Experiência Profissional</h2>
+            <h2>Sobre Mim</h2>
 
-<div class="cards">
+            <div class="about-content">
 
-<div class="card">
-<h3>PAMAFER</h3>
-<p>Vendedor Externo</p>
-<p>2019 - 2024</p>
-</div>
+                <p>
+                    Sou profissional da área de Tecnologia da Informação,
+                    com trajetória multidisciplinar que integra Ciência de Dados,
+                    Análise e Desenvolvimento de Sistemas e especialização
+                    em Banco de Dados.
+                </p>
 
-<div class="card">
-<h3>Novo Aço</h3>
-<p>Assistente Administrativo</p>
-<p>2018 - 2019</p>
-</div>
+                <p>
+                    Atualmente sou bacharelando em Ciência de Dados pela
+                    <span class="highlight">Universidade Virtual do Estado
+                    de São Paulo (UNIVESP)</span>, com previsão de conclusão
+                    em maio de 2027. Sou tecnólogo em Análise e Desenvolvimento
+                    de Sistemas e pós-graduado em Banco de Dados pela
+                    Universidade Cesumar.
+                </p>
 
-<div class="card">
-<h3>Magazine Luiza</h3>
-<p>Consultor de Vendas</p>
-<p>2016 - 2018</p>
-</div>
+                <p>
+                    Minha experiência profissional contempla Tecnologia,
+                    Administração, Marketing e Operações Logísticas,
+                    proporcionando uma visão integrada dos processos
+                    organizacionais e das necessidades de negócio.
+                </p>
 
-<div class="card">
-<h3>Mineração Curimbaba</h3>
-<p>Controle de Estoque</p>
-<p>2013 - 2014</p>
-</div>
+                <p>
+                    No desenvolvimento de projetos, trabalho com Python,
+                    SQL, bancos de dados relacionais, desenvolvimento web,
+                    visualização de dados e construção de dashboards
+                    interativos.
+                </p>
 
-</div>
+                <p>
+                    Tenho especial interesse em pesquisa aplicada,
+                    inteligência de dados, Machine Learning e soluções
+                    computacionais direcionadas à educação, ao agronegócio,
+                    à sustentabilidade e ao impacto social.
+                </p>
 
-</div>
+                <p>
+                    Meu propósito é conectar conhecimento científico,
+                    tecnologia e utilidade pública, contribuindo para
+                    soluções acessíveis, eficientes e orientadas por dados.
+                </p>
 
-</section>
+            </div>
 
-<section id="projetos">
+        </div>
 
-<div class="container">
+    </section>
 
-<h2>Projetos</h2>
+    <!-- INDICADORES -->
 
-<div class="cards">
+    <section id="stats">
 
-<div class="card">
-<h3>Comunidade Segura</h3>
-<p>Sistema de denúncias anônimas.</p>
-</div>
+        <div class="container stats-grid">
 
-<div class="card">
-<h3>EduData Brasil</h3>
-<p>Visualização de dados educacionais.</p>
-</div>
+            <div class="stat-card">
+                <h3>30+</h3>
+                <p>Anos de trajetória profissional</p>
+            </div>
 
-<div class="card">
-<h3>Sistema de Doações</h3>
-<p>Django + PostgreSQL.</p>
-</div>
+            <div class="stat-card">
+                <h3>04</h3>
+                <p>Projetos tecnológicos</p>
+            </div>
 
-</div>
+            <div class="stat-card">
+                <h3>04</h3>
+                <p>Formações acadêmicas e técnicas</p>
+            </div>
 
-</div>
+            <div class="stat-card">
+                <h3>12+</h3>
+                <p>Tecnologias e ferramentas</p>
+            </div>
 
-</section>
+        </div>
 
-<section id="contato">
+    </section>
 
-<div class="container">
+    <!-- COMPETÊNCIAS -->
 
-<h2>Contato</h2>
+    <section id="skills">
 
-<p>
+        <div class="container">
 
-<i class="fab fa-github"></i>
-github.com/KASSAMBA-MTB
+            <h2>Competências Tecnológicas</h2>
 
-</p>
+            <p class="section-subtitle">
+                Ferramentas, linguagens e tecnologias utilizadas
+                nos estudos e projetos de desenvolvimento.
+            </p>
 
-<p>
+            <h3 class="subsection-title">Programação e Desenvolvimento</h3>
 
-<i class="fas fa-graduation-cap"></i>
-Currículo Lattes
+            <div class="skills-grid">
 
-</p>
+                <div class="skill-card"><i class="fab fa-python"></i>Python</div>
+                <div class="skill-card"><i class="fab fa-js"></i>JavaScript</div>
+                <div class="skill-card"><i class="fab fa-html5"></i>HTML5</div>
+                <div class="skill-card"><i class="fab fa-css3-alt"></i>CSS3</div>
+                <div class="skill-card"><i class="fas fa-server"></i>Django</div>
+                <div class="skill-card"><i class="fas fa-code"></i>Flask</div>
+                <div class="skill-card"><i class="fab fa-bootstrap"></i>Bootstrap</div>
 
-</div>
+            </div>
 
-</section>
+            <h3 class="subsection-title">Banco de Dados</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card"><i class="fas fa-database"></i>SQL</div>
+                <div class="skill-card"><i class="fas fa-database"></i>PostgreSQL</div>
+                <div class="skill-card"><i class="fas fa-database"></i>MySQL</div>
+                <div class="skill-card"><i class="fas fa-table"></i>SQLite</div>
+                <div class="skill-card"><i class="fas fa-shield-alt"></i>Segurança de Dados</div>
+
+            </div>
+
+            <h3 class="subsection-title">Ciência de Dados e Ferramentas</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card"><i class="fas fa-chart-line"></i>Data Analytics</div>
+                <div class="skill-card"><i class="fas fa-chart-pie"></i>Business Intelligence</div>
+                <div class="skill-card"><i class="fas fa-brain"></i>Machine Learning</div>
+                <div class="skill-card"><i class="fas fa-chart-bar"></i>Chart.js</div>
+                <div class="skill-card"><i class="fas fa-map-marked-alt"></i>Leaflet</div>
+                <div class="skill-card"><i class="fab fa-git-alt"></i>Git</div>
+                <div class="skill-card"><i class="fab fa-github"></i>GitHub</div>
+                <div class="skill-card"><i class="fas fa-file-excel"></i>Pacote Office</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FORMAÇÃO -->
+
+    <section id="formacao">
+
+        <div class="container">
+
+            <h2>Formação Acadêmica</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>2023 – Maio de 2027 (previsão)</h3>
+                    <p><strong>Bacharelado em Ciência de Dados</strong></p>
+                    <p>Universidade Virtual do Estado de São Paulo – UNIVESP.</p>
+                    <p class="detail">Graduação em andamento.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2018 – 2021</h3>
+                    <p><strong>Pós-graduação Lato Sensu em Banco de Dados</strong></p>
+                    <p>Centro Universitário de Maringá – UniCesumar.</p>
+                    <p class="detail">Carga horária: 480 horas.</p>
+                    <p class="detail">
+                        Trabalho: Segurança no Tratamento de Dados
+                        em Ambientes Computacionais.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2016 – 2018</h3>
+                    <p><strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong></p>
+                    <p>Centro Universitário de Maringá – UniCesumar.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2012 – 2015</h3>
+                    <p><strong>Técnico em Informática</strong></p>
+                    <p>IFSULDEMINAS.</p>
+                    <p class="detail">Carga horária: 1.260 horas.</p>
+                </div>
+
+            </div>
+
+            <h3 class="subsection-title">Formação Complementar</h3>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Segurança Cibernética</h3>
+                    <p>CIS Controls – Controles 7 a 12.</p>
+                    <p>ENAP | 2026 | 25 horas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python – Basic Module</h3>
+                    <p>FATEC | 2025 | 32 horas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-language"></i></div>
+                    <h3>Inglês Intermediário</h3>
+                    <p>Duolingo | Score 62.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-image"></i></div>
+                    <h3>Adobe Photoshop</h3>
+                    <p>Manipulação de Imagens.</p>
+                    <p>Centro de Design do Sul/MG.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>CorelDRAW</h3>
+                    <p>Introdução à Programação Visual.</p>
+                    <p>Centro de Design do Sul/MG.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+
+    <section id="experiencia">
+
+        <div class="container">
+
+            <h2>Experiência Profissional</h2>
+
+            <p class="section-subtitle">
+                Trajetória profissional em Tecnologia, Administração,
+                Marketing, Atendimento e Operações Logísticas.
+            </p>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>28/10/2019 – 03/07/2024</h3>
+                    <p><strong>PAMAFER FERRO E AÇO LTDA</strong></p>
+                    <p>Auxiliar Administrativo.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>06/08/2018 – 14/10/2019</h3>
+                    <p><strong>NOVO AÇO LTDA</strong></p>
+                    <p>Assistente Administrativo.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>14/04/2016 – 07/05/2018</h3>
+                    <p><strong>MAGAZINE LUIZA S/A</strong></p>
+                    <p>Vendedor.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>22/09/2015 – 26/02/2016</h3>
+                    <p><strong>MARIA LYDIA GOMES FLORA</strong></p>
+                    <p>Gerente Administrativo.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>01/06/2015 – 29/08/2015</h3>
+                    <p><strong>RODOLPHO BERNARDI NETO</strong></p>
+                    <p>Promotor de Marketing.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>19/09/2013 – 06/12/2014</h3>
+                    <p><strong>MINERAÇÃO CURIMBABA LTDA</strong></p>
+                    <p>Almoxarife.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>02/01/2013 – 18/09/2013</h3>
+                    <p><strong>GESTER GESTÃO DE SERVIÇOS</strong></p>
+                    <p>Almoxarife.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>01/10/2001 – 31/08/2011</h3>
+                    <p><strong>MARCÍLIO JUDICE & CIA LTDA</strong></p>
+                    <p>Atendente.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>05/11/2000 – 20/03/2001</h3>
+                    <p><strong>MEDCALL PRODUTOS FARMACÊUTICOS LTDA</strong></p>
+                    <p>Auxiliar de Entrada de Mercadorias II.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>26/11/1991 – 01/09/2000</h3>
+                    <p><strong>P. SEVERINI NETO COMERCIAL LTDA</strong></p>
+                    <p>Serviços Gerais.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>01/03/1990 – 07/02/1991</h3>
+                    <p><strong>SULCAR S/A – VEÍCULOS E EQUIPAMENTOS</strong></p>
+                    <p>Office Boy.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJETOS -->
+
+    <section id="projetos">
+
+        <div class="container">
+
+            <h2>Projetos e Desenvolvimento</h2>
+
+            <p class="section-subtitle">
+                Aplicações práticas de tecnologia, Ciência de Dados
+                e desenvolvimento de sistemas para desafios reais.
+            </p>
+
+            <div class="cards">
+
+                <article class="card project-card">
+
+                    <div class="card-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+
+                    <h3>AgroClima Café</h3>
+
+                    <p>
+                        Plataforma de monitoramento climático aplicada
+                        à cafeicultura, com análise de temperatura,
+                        precipitação e ocorrências de geadas.
+                    </p>
+
+                    <p>
+                        Integração de informações meteorológicas,
+                        indicadores municipais, dashboards analíticos
+                        e visualização geográfica.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Chart.js</span>
+                        <span class="tag">Leaflet</span>
+                        <span class="tag">Data Science</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <a class="project-link"
+                           href="https://github.com/KASSAMBA-MTB"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Repositório GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="card project-card">
+
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <h3>EduData Brasil</h3>
+
+                    <p>
+                        Plataforma de indicadores educacionais destinada
+                        à democratização do acesso a informações públicas
+                        da educação brasileira.
+                    </p>
+
+                    <p>
+                        Trabalha com dados do INEP, incluindo IDEB,
+                        SAEB e ENEM, por meio de dashboards interativos
+                        e visualizações geográficas.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Indicadores</span>
+                        <span class="tag">INEP</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Chart.js</span>
+                        <span class="tag">Leaflet</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <a class="project-link"
+                           href="https://github.com/KASSAMBA-MTB"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Repositório GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="card project-card">
+
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+
+                    <h3>Sistema de Gestão de Doações</h3>
+
+                    <p>
+                        Aplicação web para gerenciamento de doações
+                        direcionada a organizações não governamentais.
+                    </p>
+
+                    <p>
+                        Possui operações de cadastro, edição, exclusão
+                        e controle de acesso por autenticação.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <a class="project-link"
+                           href="https://github.com/KASSAMBA-MTB"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Repositório GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="card project-card">
+
+                    <div class="card-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+
+                    <h3>Comunidade Segura</h3>
+
+                    <p>
+                        Projeto de sistema de denúncias anônimas,
+                        concebido para apoiar a participação social
+                        e o registro de ocorrências comunitárias.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Desenvolvimento Web</span>
+                        <span class="tag">Tecnologia Social</span>
+                        <span class="tag">Sistemas de Informação</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <a class="project-link"
+                           href="https://github.com/KASSAMBA-MTB"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Repositório GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- IDIOMAS -->
+
+    <section id="idiomas">
+
+        <div class="container">
+
+            <h2>Idiomas</h2>
+
+            <div class="languages-grid">
+
+                <div class="language-card">
+                    <h3>Português</h3>
+                    <p>Compreende, fala, lê e escreve bem.</p>
+                </div>
+
+                <div class="language-card">
+                    <h3>Inglês</h3>
+                    <p>Compreensão, fala, leitura e escrita razoáveis.</p>
+                </div>
+
+                <div class="language-card">
+                    <h3>Espanhol</h3>
+                    <p>Compreensão, leitura e escrita razoáveis. Fala pouco.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATO -->
+
+    <section id="contato">
+
+        <div class="container">
+
+            <h2>Conecte-se Comigo</h2>
+
+            <div class="contact-box">
+
+                <p>
+                    Estou aberto a oportunidades profissionais,
+                    projetos de tecnologia, pesquisa aplicada
+                    e colaboração em Ciência de Dados.
+                </p>
+
+                <p>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/KASSAMBA-MTB"
+                       target="_blank" rel="noopener noreferrer">
+                        github.com/KASSAMBA-MTB
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fas fa-graduation-cap"></i>
+                    <a href="http://lattes.cnpq.br/4578034532577888"
+                       target="_blank" rel="noopener noreferrer">
+                        Currículo Lattes
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="https://kassamba-mtb.github.io/ProjetoWeb/"
+                       target="_blank" rel="noopener noreferrer">
+                        Portfólio Profissional
+                    </a>
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="https://github.com/KASSAMBA-MTB"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn-primary">
+                        <i class="fab fa-github"></i>
+                        Acessar GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
 
 <footer>
 
-<p>
+    <p>
+        © 2026 Walter Junio Pontes Teixeira.
+        Ciência de Dados | Tecnologia | Inovação.
+    </p>
 
-© 2026 Walter Junio Pontes Teixeira
-
-</p>
+    <p>Desenvolvido com HTML5, CSS3 e JavaScript.</p>
 
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script src="js/app.js"></script>
+
+<script>
+    // Menu responsivo
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('active');
+
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+
+        menuBtn.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    // Fechar menu após selecionar uma seção
+    document.querySelectorAll('#navLinks a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+
+    // Efeito de digitação
+    const typingElement = document.getElementById('typing');
+
+    const professions = [
+        'Bacharelando em Ciência de Dados',
+        'Analista de Dados',
+        'Business Intelligence',
+        'Desenvolvimento Python',
+        'Banco de Dados',
+        'Pesquisa e Inovação'
+    ];
+
+    let professionIndex = 0;
+    let characterIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+        const current = professions[professionIndex];
+
+        if (deleting) {
+            characterIndex--;
+        } else {
+            characterIndex++;
+        }
+
+        typingElement.textContent = current.substring(0, characterIndex);
+
+        let delay = deleting ? 45 : 85;
+
+        if (!deleting && characterIndex === current.length) {
+            deleting = true;
+            delay = 1800;
+        }
+
+        if (deleting && characterIndex === 0) {
+            deleting = false;
+            professionIndex = (professionIndex + 1) % professions.length;
+            delay = 400;
+        }
+
+        setTimeout(typeEffect, delay);
+    }
+
+    typeEffect();
+</script>
 
 </body>
 </html>
